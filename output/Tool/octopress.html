@@ -41,6 +41,19 @@
 <span class="o">*</span><span class="mi">2</span><span class="err">、要根治的话需要改</span><span class="n">zsh</span><span class="err">配置文件</span> <span class="err">加</span> <span class="n">alias</span> <span class="n">rake</span><span class="o">=</span><span class="s">&quot;noglob rake&quot;</span> <span class="err">取消通配</span>    
 <span class="n">vim</span> <span class="o">~/</span><span class="p">.</span><span class="n">zshrc</span>
 </pre></div>
+
+
+<h2 id="_1">中文标题问题</h2>
+<div class="hlcode"><pre><span class="n">rake</span> <span class="n">new_post</span><span class="p">[</span><span class="s">&quot;测试&quot;</span><span class="p">]</span>
+<span class="n">rake</span> <span class="n">generate</span> 
+<span class="n">Creating</span> <span class="n">new</span> <span class="n">post</span><span class="o">:</span> <span class="n">source</span><span class="o">/</span><span class="n">_posts</span><span class="o">/</span><span class="mi">2014</span><span class="o">-</span><span class="mo">06</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="n">ce</span><span class="o">-</span><span class="n">shi</span><span class="o">-</span><span class="n">zhong</span><span class="o">-</span><span class="n">wen</span><span class="p">.</span><span class="n">markdown</span>
+
+<span class="n">octopress</span><span class="err">自动将中文转到了拼音，如果强制将</span> <span class="n">md</span> <span class="err">改成中文标题，博客可以显示标题但点进详情后找不着对应的</span><span class="n">index</span><span class="p">.</span><span class="n">html</span><span class="err">文件，需要手工补全才能显示详情页</span>
+
+<span class="err">推荐做法</span>
+<span class="n">rake</span> <span class="n">new_post</span><span class="p">[</span><span class="s">&quot;Test&quot;</span><span class="p">]</span>
+<span class="err">编辑新生成的</span><span class="n">md</span><span class="err">文件中将</span> <span class="n">title</span><span class="o">:</span><span class="n">Test</span> <span class="err">改成</span> <span class="n">title</span><span class="o">:</span><span class="err">测试</span>
+</pre></div>
     </div>
 
         </div>

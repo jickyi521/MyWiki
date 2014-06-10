@@ -25,4 +25,22 @@ date: 2014-06-09 23:23
 	vim ~/.zshrc 
 
 
+##中文标题问题##
+	
+
+	rake new_post["测试"]
+	rake generate 
+    Creating new post: source/_posts/2014-06-10-ce-shi-zhong-wen.markdown
+
+    octopress自动将中文转到了拼音，如果强制将 md 改成中文标题，博客可以显示标题但点进详情后找不着对应的index.html文件，需要手工补全才能显示详情页
+
+    推荐做法
+    rake new_post["Test"]
+    编辑新生成的md文件中将 title:Test 改成 title:测试
+
+
+	
+
+
+
 
