@@ -23,15 +23,24 @@
     <div id="title">Git Command</div>
     <div id="content">
         <div class="toc"><span class="toctitle">Table of Contents</span><ul>
-<li><a href="#pushgit-server">本地push新工程到git server远程分支</a></li>
+<li><a href="#_1">远程分支</a></li>
 </ul>
 </div>
 <p>Git的<code>help</code>信息非常好，很多可以直接help来了解</p>
-<h2 id="pushgit-server">本地push新工程到git server远程分支</h2>
-<p>touch README.md
-touch .gitignore
-git init 
-git add </p>
+<h2 id="_1">远程分支</h2>
+<p>参考的 <a href="http://git-scm.com/book/zh/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF">远程分支</a></p>
+<p>从远程Git repo克隆，Git会自动将此remote repo命名为<code>origin</code>，并下载其中所有的数据，建立一个指向它的<code>master</code>分支的指针，在本地命名为<code>origin/master</code></p>
+<p>但无法在本地更改其数据。接着，Git建立一个属于自己的本地<code>master</code>分支，始于<code>origin</code>上<code>master</code>分支相同的位置，这样可以就此开始工作</p>
+<div class="hlcode"><pre><span class="n">touch</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
+<span class="n">git</span> <span class="n">init</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">README</span><span class="p">.</span><span class="n">md</span>
+<span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s">&quot;first commit&quot;</span>
+<span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">git</span><span class="err">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">:</span><span class="n">jickyi521</span><span class="o">/</span><span class="n">jickyi521</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">-</span><span class="n">u</span> <span class="n">origin</span> <span class="n">master</span>
+</pre></div>
+
+
+<p>这里origin是remote repo name，branch name 是master</p>
     </div>
 
         </div>

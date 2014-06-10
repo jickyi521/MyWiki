@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="Stylesheet" type="text/css" href="/static/css/style.css">
+        <link rel="Stylesheet" type="text/css" href="/static/css/tango.css">
+        <title>Octopress - Eason · Wiki</title>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body>
+        <div id="container">
+            
+    <div id="header">
+        <div id="post-nav">
+            
+            <a href="/">Home</a> » <a href="/#Tool">Tool</a> » Octopress
+            
+        </div>
+    </div>
+    <div class="clearfix"></div>
+    <div id="title">Octopress</div>
+    <div id="content">
+        <h2 id="commands">Commands</h2>
+<ul>
+<li><code>rake setup_github_pages</code> 设置github_pages</li>
+<li><code>rake new post['article name']</code> 生成博文框架，编辑md文件即可</li>
+<li><code>rake watch</code> 检测文件变化，实时生成新内容</li>
+<li><code>rake generate</code> 生成静态文件 </li>
+<li><code>rake preview</code> 在本机4000端口生成访问内容 </li>
+<li><code>rake deploy</code> 发布文件，同步到github master  </li>
+</ul>
+<h2 id="zshoctopress">Zsh下octopress命令问题</h2>
+<div class="hlcode"><pre><span class="n">rake</span> <span class="n">new_post</span><span class="p">[</span><span class="s">&quot;test&quot;</span><span class="p">]</span>
+<span class="o">-&gt;</span><span class="n">zsh</span><span class="o">:</span> <span class="n">no</span> <span class="n">matches</span> <span class="n">found</span><span class="o">:</span> <span class="n">new_post</span><span class="p">[</span><span class="n">test</span><span class="p">]</span>
+
+<span class="o">*</span><span class="mi">1</span><span class="err">、</span> <span class="err">由于</span><span class="n">zsh</span><span class="err">的通配符造成的</span> <span class="o">*</span><span class="p">,</span> <span class="p">(,</span> <span class="o">|</span><span class="p">,</span> <span class="o">&lt;</span><span class="p">,</span> <span class="p">[,</span> <span class="o">?</span><span class="p">,</span> <span class="err">可以用引号括起来</span> 
+<span class="n">rake</span> <span class="s">&quot;new_post[test]&quot;</span>
+
+<span class="o">*</span><span class="mi">2</span><span class="err">、要根治的话需要改</span><span class="n">zsh</span><span class="err">配置文件</span> <span class="err">加</span> <span class="n">alias</span> <span class="n">rake</span><span class="o">=</span><span class="s">&quot;noglob rake&quot;</span> <span class="err">取消通配</span>    
+<span class="n">vim</span> <span class="o">~/</span><span class="p">.</span><span class="n">zshrc</span>
+</pre></div>
+    </div>
+
+        </div>
+        <div id="footer">
+            <span>
+                Copyright © 2012-2014 Eason.
+                Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.
+            </span>
+        </div>
+        
+    </body>
+</html>
