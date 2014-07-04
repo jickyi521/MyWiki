@@ -24,6 +24,7 @@
     <div id="content">
         <div class="toc"><span class="toctitle">Table of Contents</span><ul>
 <li><a href="#_1">远程分支</a></li>
+<li><a href="#_2">恢复被删除的文件</a></li>
 </ul>
 </div>
 <p>Git的<code>help</code>信息非常好，很多可以直接help来了解</p>
@@ -41,6 +42,10 @@
 
 
 <p>这里origin是remote repo name，branch name 是master</p>
+<h2 id="_2">恢复被删除的文件</h2>
+<div class="hlcode"><pre><span class="nx">git</span> <span class="k">log</span> 
+<span class="nx">git</span> <span class="nx">checkout</span> <span class="err">[</span><span class="nx">commit_id</span><span class="cp">]</span>  <span class="nt">&lt;path</span><span class="na">_to_file</span><span class="nt">&gt;</span>   恢复某个删除的文件
+</pre></div>
     </div>
 
         </div>

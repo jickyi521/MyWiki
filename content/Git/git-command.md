@@ -25,3 +25,15 @@ Git的`help`信息非常好，很多可以直接help来了解
 
 这里origin是remote repo name，branch name 是master
 
+
+## 恢复被删除的文件 ##
+
+	git log 
+	git checkout [commit_id]  <path_to_file>   恢复某个删除的文件
+ 
+
+
+
+
+
+
