@@ -3,7 +3,7 @@
     <head>
         <link rel="Stylesheet" type="text/css" href="/static/css/style.css">
         <link rel="Stylesheet" type="text/css" href="/static/css/tango.css">
-        <title>xcode compile error - Eason · Wiki</title>
+        <title>clipSubview - Eason · Wiki</title>
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -15,18 +15,15 @@
     <div id="header">
         <div id="post-nav">
             
-            <a href="/">Home</a> » <a href="/#iOS">iOS</a> » xcode compile error
+            <a href="/">Home</a> » <a href="/#iOS">iOS</a> » clipSubview
             
         </div>
     </div>
     <div class="clearfix"></div>
-    <div id="title">xcode compile error</div>
+    <div id="title">clipSubview</div>
     <div id="content">
-        <h2 id="xx-duplicate-symbols-for-architecture-x86_64">xx duplicate symbols for architecture x86_64</h2>
-<p>一个工程里面有多个 main 入口，只能保留一个</p>
-<h2 id="undefined-symbols-for-architecture-i386">Undefined symbols for architecture i386</h2>
-<p>说明缺少某种框架，或者类。根据提示进行添加某些框架或者类。
-点进相应的框架入口 .m， 看import 哪些包，如果没有引入，试着在 build phases -&gt; link binary with libraries 里引入</p>
+        <p>UIImage View 里android 有个 ScaleType.CENTER_CROP 对应于 iOS 下面的 Aspect Fill
+不过需要将 clipSubViews 选中，否则绘制图片的布局将会撑大原有的frame。</p>
     </div>
 
         </div>
